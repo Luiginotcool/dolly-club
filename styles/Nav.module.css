@@ -1,0 +1,32 @@
+.nav {
+    height: 50px;
+    padding: 10px;
+    background: #413F42;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav ul li a {
+    margin: 5px 15px;
+}
+
+
+.flex {
+	display: flex;
+	flex-direction: row;
+    padding: 10px;
+}
+
+.flex div {
+    display: flex;
+}
+	

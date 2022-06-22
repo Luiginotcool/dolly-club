@@ -1,0 +1,22 @@
+.flex {
+	display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+
+.flex > * {
+    text-align: center;
+    margin:auto;
+}
+
+.table{
+    border: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table *{
+    border:0;
+}
