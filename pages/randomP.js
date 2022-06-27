@@ -1,6 +1,12 @@
+import Image from "next/image"
+
 const randomP = () => {
   return (
-    <div>randomP</div>
+    <>
+      <Image
+        
+      />
+    </>
   )
 }
 

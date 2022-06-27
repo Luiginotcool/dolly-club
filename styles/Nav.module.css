@@ -2,7 +2,6 @@
     height: 50px;
     padding: 10px;
     background: #413F42;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -24,6 +23,8 @@
 	display: flex;
 	flex-direction: row;
     padding: 10px;
+    background: #413F42;
+    color:aliceblue;
 }
 
 .flex div {

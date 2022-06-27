@@ -1,15 +1,26 @@
 import { getAllPhotoIds, getPhotoData } from "../../lib/photos"
 import Image from "next/image";
-export default function PhotoPage(postData) {
-    console.log(postData.id)
+import DollyImage from "../../components/DollyImage";
+
+
+export default function PhotoPage(photoData) {
+    const id = photoData.id
+    const fp = photoData.fullPath
+    console.log(photoData.relativePath)
     return(
         <>
+            <DollyImage 
+                relativePath = {photoData.relativePath}
+                id = {id}
+                caption = "Caption Placeholder"
+            />
+            {/*
             <Image 
-                src={`/photos/cropped/${postData.id}.jpg`}
-                alt={`Dolly photo ${postData.id}`}
+                src={photoData.relativePath}
+                alt={`Dolly photo ${id}`}
                 width="500px"
                 height="500px"
-            />
+            />*/}
         </>
     )
 }
@@ -24,8 +35,9 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps({ params }) {
-    const postData = getPhotoData(params.id)
+    const paths = getAllPhotoIds();
+    const photoData = getPhotoData(params.id);
     return {
-        props: postData
+        props: photoData
     }
 }
